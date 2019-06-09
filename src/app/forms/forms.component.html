@@ -1,0 +1,27 @@
+
+<form [formGroup]="regForm" novalidate>
+  
+  <div class="row form-group">
+    <div class="col-4">
+      <app-input-container label="Nome" errormsg="Digite um nome valido">
+        <input type="text" formControlName="nome" class="form-control" >
+      </app-input-container>
+    </div>
+    
+    <div class="col-4">
+      <app-input-container label="Email" errormsg="Digite um email valido">
+        <input type="text" formControlName="email" class="form-control">
+      </app-input-container>
+    </div>
+    
+    
+    <div class="col-2">
+      <app-input-container label="Data" errormsg="Digite uma data valida">
+        <input type="text" formControlName="data" class="form-control" >
+      </app-input-container>
+    </div>
+</div>
+
+      <button type="button" class="btn btn-primary" (click)="enviaForm()" [disabled]="!regForm.valid">Enviar</button>
+  
+</form>

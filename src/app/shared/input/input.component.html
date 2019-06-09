@@ -1,0 +1,11 @@
+<div [class.has-success]="hasSuccess()" [class.has-error]="hasError()">
+    
+      <label> {{label}}</label>
+    
+      <ng-content></ng-content>
+
+      <div class="text-success" *ngIf="hasSuccess()">OK!</div>
+      <div class="text-danger" *ngIf="hasError()">{{errormsg}}</div>
+
+    
+</div>
